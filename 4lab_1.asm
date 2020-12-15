@@ -23,25 +23,25 @@ and ax, MASKA
 cmp ax,0
 jz m1
 
-cmp ax,10h
+cmp ax,20h
 jz m2
 
-cmp ax,20h
+cmp ax,10h
 jz m3 
 
-mov OTV,3
+mov OTV,3;00000000000110000
 jmp konec
 
 m1: 
-mov OTV,0
+mov OTV,0;00000000000000000
 jmp konec
 
 m2: 
-mov OTV,1
+mov OTV,1;00000000000100000
 jmp konec
 
 m3: 
-mov OTV,2
+mov OTV,2;00000000000010000
 
 konec: mov ax,OTV
 mov date,ax
