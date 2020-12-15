@@ -15,7 +15,7 @@ Ones db ?
 ;---------------------------------
 K dw 0BC68h 
 OTV dw ?
-MASKA dw 0000000001100000b
+MASKA dw 00000000000110000b
 main proc near
 mov ax, K
 and ax, MASKA 
@@ -23,7 +23,7 @@ and ax, MASKA
 cmp ax,0
 jz m1
 
-cmp ax,40h
+cmp ax,10h
 jz m2
 
 cmp ax,20h
